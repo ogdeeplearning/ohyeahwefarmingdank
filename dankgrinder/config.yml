@@ -1,388 +1,469 @@
-# See https://github.com/dankgrinder/dankgrinder#getting-an-authorization-token
-# for instructions on how to get a token.
-#
-# See https://github.com/dankgrinder/dankgrinder#enabling-discords-developer-mode
-# for instructions on how to get a channel id.
-#
-# Detailed instructions on this config are available at
-# https://github.com/dankgrinder/dankgrinder#configuration.
-# Make sure you have read that as well as the frequently asked questions before
-# asking for support on GitHub or Discord.
-
 clusters:
   default:
     master:
-      token: "ODAyMDc2MzgxNDc4NzgwOTM5.YFf7Tg.aZFlHAH0hmcrNaBXZljeAmVX4lo"
-      channel_id: "823377002924998729"
-
-shifts:
-  - state: "active"
-    duration:
-      base: 21600
-      variation: 1800
-  - state: "dormant"
-    duration:
-      base: 64800
-      variation: 1800
-
+      channel_id: '823377002924998729'
+      token: ODAyMDc2MzgxNDc4NzgwOTM5.YFf7Tg.aZFlHAH0hmcrNaBXZljeAmVX4lo
+compatibility:
+  allowed_searches:
+  - bus
+  - coat
+  - dresser
+  - grass
+  - laundromat
+  - mailbox
+  - pantry
+  - pocket
+  - shoe
+  - sink
+  await_response_timeout: 12
+  cooldown:
+    beg: 48
+    blackjack: 13
+    fish: 63
+    gift: 26
+    highlow: 33
+    hunt: 63
+    postmeme: 63
+    search: 38
+    sell: 6
+    share: 13
+  postmeme:
+  - f
+  - r
+  - i
+  - c
+  - k
+  search_cancel:
+  - 'no'
+  - bad options
+  - i don't want to die
+  - stop
+  - .
 features:
-  commands:
-    beg: true
-    postmeme: true
-    search: true
-    highlow: true
-    fish: true
-    hunt: true
-  custom_commands:
+  auto_blackjack:
+    amount: 50000
+    enable: true
+    logic_table:
+      2:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: s
+        16: s
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: s
+        soft18: s
+        soft19: s
+        soft20: s
+      3:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: s
+        16: s
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: s
+        soft18: s
+        soft19: s
+        soft20: s
+      4:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: s
+        15: s
+        16: s
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: s
+        soft18: s
+        soft19: s
+        soft20: s
+      5:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: s
+        15: s
+        16: s
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: s
+        soft18: s
+        soft19: s
+        soft20: s
+      6:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: s
+        15: s
+        16: s
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: s
+        soft18: s
+        soft19: s
+        soft20: s
+      7:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: h
+        16: h
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: s
+        soft18: s
+        soft19: s
+        soft20: s
+      8:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: h
+        16: h
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: h
+        soft18: s
+        soft19: s
+        soft20: s
+      9:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: h
+        16: h
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: h
+        soft18: s
+        soft19: s
+        soft20: s
+      10:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: h
+        16: h
+        17: s
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: h
+        soft18: s
+        soft19: s
+        soft20: s
+      A:
+        4: h
+        5: h
+        6: h
+        7: h
+        8: h
+        9: h
+        10: h
+        11: h
+        12: h
+        13: h
+        14: h
+        15: h
+        16: h
+        17: h
+        18: s
+        19: s
+        20: s
+        soft12: h
+        soft13: h
+        soft14: h
+        soft15: h
+        soft16: h
+        soft17: h
+        soft18: s
+        soft19: s
+        soft20: s
+    pause_below_balance: 1000000
   auto_buy:
     fishing_pole: true
     hunting_rifle: true
     laptop: true
-  auto_sell:
-    enable: false
-    items:
-      - "boar"
-      - "dragon"
-      - "duck"
-      - "fish"
-      - "deer"
-      - "rabbit"
-      - "skunk"
   auto_gift:
     enable: false
     items:
-      - "bank"
-      - "pizza"
+    - bank
+    - pizza
+  auto_sell:
+    enable: false
+    items:
+    - boar
+    - dragon
+    - duck
+    - fish
+    - deer
+    - rabbit
+    - skunk
   auto_share:
     enable: false
     maximum_balance: 8000000
     minimum_balance: 5000000
-  auto_blackjack:
-    enable: true
-    pause_below_balance: 1000000
-    amount: 50000
-    logic_table:
-      2:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "s"
-        16: "s"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "s"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      3:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "s"
-        16: "s"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "s"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      4:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "s"
-        15: "s"
-        16: "s"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "s"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      5:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "s"
-        15: "s"
-        16: "s"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "s"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      6:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "s"
-        15: "s"
-        16: "s"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "s"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      7:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "h"
-        16: "h"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "s"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      8:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "h"
-        16: "h"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "h"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      9:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "h"
-        16: "h"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "h"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      10:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "h"
-        16: "h"
-        17: "s"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "h"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
-      A:
-        4: "h"
-        5: "h"
-        6: "h"
-        7: "h"
-        8: "h"
-        9: "h"
-        10: "h"
-        11: "h"
-        12: "h"
-        13: "h"
-        14: "h"
-        15: "h"
-        16: "h"
-        17: "h"
-        18: "s"
-        19: "s"
-        20: "s"
-        soft12: "h"
-        soft13: "h"
-        soft14: "h"
-        soft15: "h"
-        soft16: "h"
-        soft17: "h"
-        soft18: "s"
-        soft19: "s"
-        soft20: "s"
   auto_tidepod:
-    enable: false
     buy_lifesaver_on_death: true
+    enable: false
   balance_check:
     enable: true
     interval: 180
+  commands:
+    beg: true
+    fish: true
+    highlow: true
+    hunt: true
+    postmeme: true
+    search: true
+  custom_commands: null
+  debug: false
   log_to_file: true
   verbose_log_to_stdout: false
-  debug: false
-
-compatibility:
-  postmeme:
-    - "f"
-    - "r"
-    - "i"
-    - "c"
-    - "k"
-  allowed_searches:
-    - "bus"
-    - "coat"
-    - "dresser"
-    - "grass"
-    - "laundromat"
-    - "mailbox"
-    - "pantry"
-    - "pocket"
-    - "shoe"
-    - "sink"
-  search_cancel:
-    - "no"
-    - "bad options"
-    - "i don't want to die"
-    - "stop"
-    - "."
-  cooldown:
-    beg: 48
-    search: 38
-    highlow: 33
-    postmeme: 63
-    fish: 63
-    hunt: 63
-    blackjack: 13
-    sell: 6
-    gift: 26
-    share: 13
-  await_response_timeout: 12
-
+shifts:
+- duration:
+    base: 1500
+    variation: 3400
+  state: active
+- duration:
+    base: 600
+    variation: 2300
+  state: dormant
+- duration:
+    base: 300
+    variation: 2200
+  state: active
+- duration:
+    base: 2700
+    variation: 3200
+  state: dormant
+- duration:
+    base: 900
+    variation: 2600
+  state: active
+- duration:
+    base: 2700
+    variation: 2400
+  state: dormant
+- duration:
+    base: 2700
+    variation: 3400
+  state: active
+- duration:
+    base: 2700
+    variation: 3600
+  state: dormant
+- duration:
+    base: 2400
+    variation: 2600
+  state: active
+- duration:
+    base: 900
+    variation: 3500
+  state: dormant
+- duration:
+    base: 2700
+    variation: 2600
+  state: active
+- duration:
+    base: 2400
+    variation: 3000
+  state: dormant
+- duration:
+    base: 1800
+    variation: 2400
+  state: active
+- duration:
+    base: 600
+    variation: 2400
+  state: dormant
+- duration:
+    base: 2100
+    variation: 3300
+  state: active
+- duration:
+    base: 600
+    variation: 2100
+  state: dormant
+- duration:
+    base: 900
+    variation: 2600
+  state: active
+- duration:
+    base: 1200
+    variation: 2500
+  state: dormant
+- duration:
+    base: 2700
+    variation: 2400
+  state: active
+- duration:
+    base: 1500
+    variation: 3100
+  state: dormant
+- duration:
+    base: 1200
+    variation: 3500
+  state: active
+- duration:
+    base: 2700
+    variation: 2700
+  state: dormant
+- duration:
+    base: 2400
+    variation: 2700
+  state: active
+- duration:
+    base: 1800
+    variation: 2500
+  state: dormant
+- duration:
+    base: 0
+    variation: 3000
+  state: active
+- duration:
+    base: 44400
+    variation: 2900
+  state: dormant
 suspicion_avoidance:
-  typing:
-    variation: 250
-    speed: 450
   message_delay:
     base: 100
     variation: 400
+  typing:
+    speed: 450
+    variation: 250
